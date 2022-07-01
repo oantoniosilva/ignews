@@ -38,7 +38,7 @@ export default function Home({ product }: HomeProps) {
 }
 
 export const getStaticProps: GetStaticProps = async () => {
-  const price = await stripe.prices.retrieve('price_1JZ51PJXWzG9exSWAwsZw2oo')
+  const price = await stripe.prices.retrieve('price_1JZ51PJXWzG9exSWAwsZw2oo');
 
   const product = {
     priceId: price.id,
